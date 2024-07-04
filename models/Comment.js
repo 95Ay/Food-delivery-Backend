@@ -9,16 +9,11 @@ const CommentSchema = new mongoose.Schema({
   order: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Order",
+    required: true,
   },
   text: {
     type: String,
     required: true,
-  },
-  quality: {
-    type: Number,
-    required: true,
-    min: 1,
-    max: 5,
   },
   date: {
     type: Date,
